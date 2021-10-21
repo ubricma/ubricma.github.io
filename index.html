@@ -5,7 +5,7 @@
 <script>
 function closePoqWebViewJSBridge2(){
 	console.log('function fired')
-	try{if (window.webkit != undefined) { window.webkit.messageHandlers.closeWebViewHandler.postMessage("close"); } else { window.Android.postMessage("close"); }}
+	try{if (window.webkit != undefined) { window.webkit.messageHandlers.closeWebViewHandler.postMessage("closewebview"); } else { window.android.postMessage("closewebview"); }}
 	catch(err){console.log("Error closing webview via JS Bridge")}
 }
 </script>
