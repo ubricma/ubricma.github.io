@@ -1,1 +1,13 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="closePoqWebViewJSBridge2()">click me he he</button>
+<script>
+function closePoqWebViewJSBridge2(){
+	console.log('function fired')
+	try{if (window.webkit != undefined) { window.webkit.messageHandlers.closeWebViewHandler.postMessage("close"); } else { window.Android.postMessage("close"); }}
+	catch(err){console.log("Error closing webview via JS Bridge")}
+}
+</script>
+</body>
+</html>
